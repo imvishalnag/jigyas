@@ -1,0 +1,17 @@
+.btn-otp {
+    position: absolute;
+    top: 33px;
+    right: 16px;
+    padding: 10px;
+}
+.account-inner {
+    padding: 20px;
+    border: 1px solid #ffac00;
+    box-shadow: 0 0 3px #ffac00;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+#mt_contact {
+    padding-bottom: 130px;
+    padding-top: 0;
+}
