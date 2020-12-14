@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jigyas is a creative education html template">
-    <title>Jigyas - Education HTML Template</title>
+    <title>Jigyas</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- CSS -->
     <link href="{{asset('web/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">

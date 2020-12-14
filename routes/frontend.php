@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['namespace' => 'Web'],function(){
+    Route::get('web/user/otp/send/{mobile}','UserController@userOtpSend')->name('admin.user_otp_send');
+    Route::group(['prefixed' => 'student'],function(){
+        Route::post('register','UserController@studentRegister')->name('web.student_register');
+    });
+});
 
 // ------- Index --------
 Route::get('/', function () {

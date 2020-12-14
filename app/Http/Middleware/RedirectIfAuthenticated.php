@@ -16,10 +16,17 @@ class RedirectIfAuthenticated
      * @return mixed
      */
     public function handle($request, Closure $next, $guard = null)
-    {
+    {        
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
-        }
+            switch ($guard) {
+               case 'admin':
+                   $route = 'admin/deshboard';
+                   break;
+              default:
+                   $route = 'admin/deshboard';
+           }
+           return redirect($route);
+       }
 
         return $next($request);
     }
