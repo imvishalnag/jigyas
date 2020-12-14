@@ -12,8 +12,14 @@
 */
 Route::group(['namespace' => 'Web'],function(){
     Route::get('web/user/otp/send/{mobile}','UserController@userOtpSend')->name('admin.user_otp_send');
-    Route::group(['prefixed' => 'student'],function(){
+    Route::group(['prefix' => 'student'],function(){
         Route::post('register','UserController@studentRegister')->name('web.student_register');
+        Route::get('/login/form','UserController@loginForm')->name('web.login');
+        Route::post('login/submit','UserController@studentLoginSubmit')->name('web.student_login_submit');
+
+        Route::group(['middleware'=>'auth:user'],function(){
+            Route::get('/dashboard', 'StudentController@index')->name('user.index');
+        });
     });
 });
 
@@ -21,11 +27,6 @@ Route::group(['namespace' => 'Web'],function(){
 Route::get('/', function () {
     return view('web.index');
 })->name('web.index');
-
-// ------- Login --------
-Route::get('/Login', function () {
-    return view('web.login');
-})->name('web.login');
 
 // ------- Register --------
 Route::get('/Register', function () {
@@ -39,10 +40,12 @@ Route::get('/Contact', function () {
 
 
 
-// ------- User Dashboard --------
-Route::get('/dashboard', function () {
-    return view('user.index');
-})->name('user.index');
+// ------- check --------
+Route::get('/check', function () {
+    return view('web.check');
+})->name('web.check');
+
+
 
 // ------- User Mocktest --------
 Route::get('/user-Mocktest', function () {

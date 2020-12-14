@@ -9,6 +9,9 @@ use App\Models\Student;
 use App\SmsHelper\Sms;
 use Hash;
 
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     public function userOtpSend($mobile)
@@ -54,5 +57,50 @@ class UserController extends Controller
         }else{
             return redirect()->back()->with('error','Please Enter Correct OTP');
         }
+    }
+
+    public function loginForm()
+    {
+        return view('web.login');
+    }
+
+    public function studentLoginSubmit(Request $request){
+        $this->validate($request, [
+            'mobile'   => 'required|digits:10',
+            'password' => 'required|string|min:8',
+        ]);
+
+        $login = $this->loginCheck($request->input('mobile'),$request->input('password'));
+        if ($login) {
+            return redirect()->intended('student/dashboard');
+        } else {
+            return back()->withInput($request->only('mobile'))->with('login_error',' Mobile or password incorrect');
+        }
+    }
+
+    function loginCheck($mobile,$password){
+        $credentials = array(
+            'mobile' => $mobile,
+            'password'  => $password,
+            'status'=>1,
+            'is_register'=>2,
+        );
+       
+        if(Auth::guard('user')->attempt($credentials)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function logout(Request $request){
+        Auth::guard('user')->logout();
+        $request->session()->invalidate();
+        return redirect()->route('web.login');
+    }
+
+    public function index()
+    {
+        return view('user.index');
     }
 }

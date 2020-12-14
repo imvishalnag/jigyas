@@ -42,6 +42,11 @@
                             <div class="form-group">
                                 <label>Name :</label>
                                 <input type="text" class="form-control" name="name">
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-8">           
@@ -51,19 +56,39 @@
                                        <button type="button" class="btn btn-primary btn-otp" onclick="sendOtp()" id="verify_btn_btn">Verify</button>   
                                     </span>
                                     <span id="otp_error"></span>
+                                    @error('mobile')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">   
                                     <label>OTP</label>    
-                                    <input type="text" class="form-control" name="otp">               
+                                    <input type="text" class="form-control" name="otp">
+                                    @error('otp')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror        
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Password:</label>
                                 <input type="Password" class="form-control" name="password">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password:</label>
                                 <input type="Password" class="form-control" name="confirm_password">
+                                @error('confirm_password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <button class="mt_btn_yellow">Register</button>

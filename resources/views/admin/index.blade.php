@@ -41,7 +41,7 @@
                     <h4 class="text-muted text-center font-18"><b>Sign In</b></h4>
 
                     <div class="p-3">
-                        {{ Form::open(array('url' => 'login', 'method' => 'post')) }}
+                        {{ Form::open(array('route' => 'admin.login_submit', 'method' => 'post')) }}
                        
                         
                         <div class="form-group row">

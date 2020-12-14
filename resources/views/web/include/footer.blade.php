@@ -142,7 +142,7 @@
     <script src="{{asset('web/js/custom-modalvideo.js')}}"></script>
     <script src="{{asset('web/js/rocket-loader.min.js')}}"></script>
     <script src="{{asset('web/js/main.js')}}"></script>
-    <script src="{{asset('web/js/aXeeT3C8FEVE2uMUPMMUDxVnKrs.js')}}"></script>
+    {{-- <script src="{{asset('web/js/aXeeT3C8FEVE2uMUPMMUDxVnKrs.js')}}"></script> --}}
 
 </body>
 </html>

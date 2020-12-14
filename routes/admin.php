@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Admin'],function(){
     Route::get('/admin/login','LoginController@index')->name('admin.login_form');    
-    Route::post('login', 'LoginController@adminLogin');
+    Route::post('admin/submit/login', 'LoginController@adminLogin')->name('admin.login_submit');
    
 
     Route::group(['middleware'=>'auth:admin','prefix'=>'admin'],function(){
