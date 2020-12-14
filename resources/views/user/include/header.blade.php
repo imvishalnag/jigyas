@@ -48,7 +48,11 @@
                                 <li><a href="{{route('user.mocktest.mocktest')}}"><span>-&nbsp;&nbsp;</span>Apply Now </a></li>
                             </ul>
                         </li>
-                        <li><a href="logout"><i class="sl sl-icon-power"></i> Logout</a></li>
+                        <li><a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="sl sl-icon-power"></i> Logout</a>
+                        <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        </li>
                     </ul>
                 </div>
             </div>

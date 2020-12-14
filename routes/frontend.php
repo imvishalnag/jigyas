@@ -18,7 +18,8 @@ Route::group(['namespace' => 'Web'],function(){
         Route::post('login/submit','UserController@studentLoginSubmit')->name('web.student_login_submit');
 
         Route::group(['middleware'=>'auth:user'],function(){
-            Route::get('/dashboard', 'StudentController@index')->name('user.index');
+            Route::post('logout', 'UserController@logout')->name('user.logout');
+            Route::get('/dashboard', 'UserController@index')->name('user.index');
         });
     });
 });
