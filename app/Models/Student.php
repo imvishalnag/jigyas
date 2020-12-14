@@ -11,6 +11,6 @@ class Student extends Model
     protected $table = 'students';
 
     protected $fillable = [
-        'name','village','po','dist','mobile','password','otp','wsap_no','email','current_school','medium','is_register'
+        'name','village','po','dist','mobile','password','otp','wsap_no','email','current_school','medium','status','fee_status','is_register'
     ];
 }
