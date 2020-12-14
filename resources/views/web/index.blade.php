@@ -1,4 +1,4 @@
-@extends('web.templete.website-master')
+@extends('web.templete.master')
 
 @section('seo')
 <meta name="description" content="Jigyas">
@@ -16,39 +16,22 @@
 
             <div class="item active">
 
-                <img src="{{asset('web/images/education/slide-1.jpg')}}" alt="slider_01" />
+                <img src="{{asset('web/images/slider/1.png')}}" alt="slider_01" />
 
                 <div class="caption_slide1 fadeInRight" data-animation="animated fadeInRight">
                     <h3>Welcome To Jigyas</h3>
                     <h1>Explore the World of Our Graduates</h1>
-                    <a class="mt_btn_white-bor" href="#">Read More</a>
-                    <a class="mt_btn_yellow" href="#">Contact Us</a>
                 </div>
             </div>
 
 
             <div class="item">
 
-                <img src="{{asset('web/images/education/slide-2.jpg')}}" alt="slider_02" />
+                <img src="{{asset('web/images/slider/2.png')}}" alt="slider_02" />
 
                 <div class="caption_slide1 caption_slide1_right wow fadeInLeft" data-animation="animated fadeInLeft">
                     <h3>Welcome To Jigyas</h3>
                     <h1>Better education for a better world</h1>
-                    <a class="mt_btn_white-bor" href="#">Read More</a>
-                    <a class="mt_btn_yellow" href="#">Contact Us</a>
-                </div>
-            </div>
-
-
-            <div class="item">
-
-                <img src="{{asset('web/images/education/slide-4.jpg')}}" alt="slider_04" />
-
-                <div class="caption_slide1 caption_slide1_center cap-new wow fadeInDown" data-animation="animated fadeInDown">
-                    <h3>Welcome To Jigyas</h3>
-                    <h1>Exceptional People, Exceptional Care</h1>
-                    <a class="mt_btn_white-bor" href="#">Read More</a>
-                    <a class="mt_btn_yellow" href="#">Contact Us</a>
                 </div>
             </div>
 
@@ -65,7 +48,7 @@
         </a>
     </div>
 
-    <div class="edu-courses">
+    {{-- <div class="edu-courses">
         <div class="container">
             <div class="row panel-grid-banner">
                 <div class="col-md-4 col-sm-12">
@@ -106,13 +89,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <section id="mt_about">
         <div class="container">
             <div class="about_services">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-7 col-sm-12">
                         <div class="about-items">
                             <div class="inner-heading">
                                 <h3>About Jigyas</h3>
@@ -123,9 +106,41 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="about-edu-bg">
-                            <img src="{{asset('web/images/education/about.png')}}" alt="About">
+                    <div class="col-md-5 col-sm-12">              
+                        <div class="noticeboard">
+                            <div class="notice-head">
+                                <h3 class="mb-0 white">Notice Board</h3>                                    
+                            </div>
+                            <ul class="p-10">
+                                <marquee behavior="scroll" direction="up" height="250px;" scrollamount="3" onmouseover="this.setAttribute('scrollamount', 0, 0);this.stop();" onmouseout="this.setAttribute('scrollamount', 3, 0);this.start();">                      
+                                    <li>
+                                        <h5 class="event-title media-heading font-opensans font-weight-600 mb-0 pt-5">
+                                            <a href="">
+                                                <span class="clender"><i class="fa fa-calendar-o mr-5 text-theme-colored"></i> 22 October, 2020</span> <br><span class="btn-xs btn-danger">New</span>
+                                                Notice Inviting Bids for Procurement of Gas Chromatograph 
+                                            </a>
+                                        </h5>
+                                    </li>  
+                                                          
+                                    <li>
+                                        <h5 class="event-title media-heading font-opensans font-weight-600 mb-0 pt-5">
+                                            <a href="">
+                                                <span class="clender"><i class="fa fa-calendar-o mr-5 text-theme-colored"></i> 24 October, 2020</span> <br><span class="btn-xs btn-danger">New</span>
+                                                Notice Inviting Bids for Procurement of Gas Chromatograph 
+                                            </a>
+                                        </h5>
+                                    </li>   
+                                                          
+                                    <li>
+                                        <h5 class="event-title media-heading font-opensans font-weight-600 mb-0 pt-5">
+                                            <a href="">
+                                                <span class="clender"><i class="fa fa-calendar-o mr-5 text-theme-colored"></i> 25 October, 2020</span> <br><span class="btn-xs btn-danger">New</span>
+                                                Notice Inviting Bids for Procurement of Gas Chromatograph 
+                                            </a>
+                                        </h5>
+                                    </li>                                
+                                </marquee>
+                            </ul>                           
                         </div>
                     </div>
                     <div class="col-xs-12">
@@ -143,6 +158,144 @@
                                 <div class="smt-items mar-top-70">
                                     <a class="mt_btn_yellow" href="#">Apply Here</a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="const-testi" class="edu-testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="inner-heading">
+                        <h3>Magazine</h3>
+                        <h2>Monthly Publisher</h2>
+                    </div>
+                    <div class="row slider-eductestimo">
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/1.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Christ Daniel</a>
+                                    <span>Biology</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/2.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">John Wakson</a>
+                                    <span>Science & Arts</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/3.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/4.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">John Wakson</a>
+                                    <span>Science & Arts</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/5.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/6.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="const-testi" class="edu-testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="inner-heading">
+                        <h3>Article</h3>
+                        <h2>Our thought</h2>
+                    </div>
+                    <div class="row slider-eductestimo">
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/1.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Christ Daniel</a>
+                                    <span>Biology</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/2.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">John Wakson</a>
+                                    <span>Science & Arts</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/3.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/4.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">John Wakson</a>
+                                    <span>Science & Arts</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/5.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial_main">
+                                <div class="client-pic"><img src="{{asset('web/images/product/6.jpg')}}" alt=""></div>
+                                <h4>
+                                    <a href="#" class="text-uppercase">Tim Loran</a>
+                                    <span>Web Developer</span>
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -189,20 +342,18 @@
                 </div>
                 <div class="col-sm-4 mix">
                     <div class="item port-popup">
-                        <a href="{{asset('web/images/gallery/gl-s1.jpg')}}" title="">
-                            <img src="{{asset('web/images/gallery/gl-s1.jpg')}}" alt="">
+                        <a href="{{asset('web/images/gallery/gl-05.jpg')}}" title="">
+                            <img src="{{asset('web/images/gallery/gl-05.jpg')}}" alt="">
                             <i class="fa fa-search"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-12 mix">
-                    <div class="last-item-g">
-                        <div class="item port-popup">
-                            <a href="{{asset('web/images/gallery/gl-c1.jpg')}}" title="">
-                                <img src="{{asset('web/images/gallery/gl-c1.jpg')}}" alt="">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
+                <div class="col-sm-4 mix">
+                    <div class="item port-popup">
+                        <a href="{{asset('web/images/gallery/gl-06.jpg')}}" title="">
+                            <img src="{{asset('web/images/gallery/gl-06.jpg')}}" alt="">
+                            <i class="fa fa-search"></i>
+                        </a>
                     </div>
                 </div>
             </div>

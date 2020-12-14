@@ -123,8 +123,8 @@ p.heading_txt {
 
 .topbar-section {
     position: relative;
-    background: rgba(255, 255, 255, .14);
-    padding: 5px 0 0;
+    background: #f8f8f8;
+    padding: 0;
 }
 
 .top-bar-left ul li,
@@ -135,17 +135,19 @@ p.heading_txt {
 .topbar-inner ul li {
     font-size: 14px;
     border-left: 1px solid #cccccc40;
-    color: #fff;
+    color: #343638;
     font-weight: 300;
-    padding: 6px 12px 6px 20px;
+    padding: 6px 0 6px 0;
     margin-left: 20px;
-    margin-bottom: 0
+    margin-bottom: 0;
+    line-height: 2.4;
 }
 
 .topbar-inner ul li:first-child {
     border: none;
     padding-left: 0;
-    margin-left: 0
+    margin-left: 0;
+    padding-bottom: 0;
 }
 
 .top-bar-right ul li {
@@ -153,22 +155,23 @@ p.heading_txt {
 }
 
 .top-bar-right ul li a {
-    color: #fff
+    color: #343638;
 }
 
 .topbar-section .topbar-inner {
     display: inline-block;
-    width: 100%;
-    padding: 0
+    width: 70%;
+    padding: 0;
+    float: right;
 }
 
 header#inner-navigation {
-    position: absolute;
+    position: relative;
     z-index: 9;
     width: 100%;
     left: 0;
     clear: both;
-    background: #ffffff15
+    background: #ffffff15;
 }
 
 .logo h2 {
@@ -241,7 +244,7 @@ header#inner-navigation {
 }
 
 .navbar.navbar-default ul.nav.navbar-nav {
-    margin-top: 9px
+    margin-top: 0;
 }
 
 .navbar.navbar-default.sticky-nav ul.nav.navbar-nav {
@@ -256,13 +259,13 @@ header#inner-navigation {
 #inner-navigation .nav.navbar-nav>li>a {
     font-size: 15px;
     font-weight: 400;
-    color: #fff;
+    color: #0d0d0d;
     padding: 0;
     line-height: 43px;
     position: relative;
     text-transform: uppercase;
     transition: all ease-in-out .5s;
-    background: 0 0
+    background: 0 0;
 }
 
 .navbar.navbar-default .navbar-collapse ul.nav.navbar-nav li.active a,
@@ -402,15 +405,16 @@ header#inner-navigation {
 @media(max-width:991px) {
     #inner-navigation .slicknav_btn,
     #inner-navigation .navbar-sticky-in.navbar-default .slicknav_btn {
-        top: 40px
+        top: 40px;
+        margin-top: -20px;
     }
     .slicknav_btn.slicknav_open:before,
     .slicknav_btn.slicknav_collapsed:before {
         color: #333a65
     }
     #inner-navigation .slicknav_nav {
-        height: 300px;
-        overflow-y: scroll
+        height: 361px;
+        overflow-y: scroll;
     }
     #inner-navigation .navbar-sticky-in.navbar-default .slicknav_nav {
         top: 85px
@@ -497,9 +501,8 @@ header#inner-navigation {
     position: relative;
     top: inherit;
     margin: 0;
-    padding: 10px 0 0;
+    padding: 0;
     height: auto;
-    background: 0 0
 }
 
 #inner-navigation .navbar {
@@ -723,8 +726,7 @@ header#inner-navigation {
     padding: 5px 0 0;
     display: inline-block;
     width: 100%;
-    background: #fff;
-    box-shadow: 0 0 10px #ccc
+    box-shadow: 0px 3px 10px #ccc;
 }
 
 #inner-navigation .navbar-sticky-in .nav.navbar-nav>li>a {
@@ -763,7 +765,7 @@ header#inner-navigation {
     #inner-navigation .slicknav_btn.slicknav_open:before,
     .slicknav_btn.slicknav_collapsed:before {
         font-size: 21px;
-        color: #fff
+        color: #1f1d26;
     }
 }
 
@@ -1018,7 +1020,8 @@ header#inner-navigation {
     padding: 50px 40px 50px 60px;
     border-radius: 5px;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    margin-top: 50px;
 }
 
 .about-form:before {
@@ -2743,7 +2746,8 @@ section#mission_main {
 
 .edu-testimonial {
     position: relative;
-    background: #2d2f38
+    background: #ffffff;
+    padding: 0 0 50px;
 }
 
 .edu-testimonial .row.slick-slider {
@@ -2784,28 +2788,25 @@ section#mission_main {
 
 .slider-eductestimo .testimonial_main h4 span {
     font-size: 14px;
-    color: #ffac00;
+    color: #181a2b;
     display: block;
-    margin-top: 10px;
-    font-weight: 300
+    margin-top: 5px;
+    font-weight: 300;
 }
 
 .testimonial_main h4 a {
-    color: #ffac00
+    color: #2a2f52;
 }
 
 .testimonial_main h4 a:hover {
-    color: #fff
+    color: #ffac00;
 }
 
 .client-pic {
     margin: 0 auto;
     width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    overflow: hidden;
-    display: inline-block
+    height: auto;
+    display: inline-block;
 }
 
 .slider-eductestimo .slick-dots {
@@ -2862,7 +2863,7 @@ section#mission_main {
 }
 
 .edu-testimonial .inner-heading {
-    margin: 32px 40px 0 0
+    margin: 0;
 }
 
 .edu-testimonial .inner-heading h2 {
@@ -3979,7 +3980,7 @@ aside .widget.widget_follow .socibox span {
 
 section#the-gallery {
     padding-top: 0;
-    padding-bottom: 150px
+    padding-bottom: 50px
 }
 
 .wide-gallery .row {
@@ -4630,8 +4631,8 @@ section#l-instructor.l-instructor-style1 {
 
 #mt_footer {
     position: relative;
-    padding-top: 0;
-    background: #333a65
+    padding-top: 50px;
+    background: #333a65;
 }
 
 #mt_footer:before {
@@ -4640,8 +4641,8 @@ section#l-instructor.l-instructor-style1 {
     position: absolute;
     left: 0;
     top: 0;
-    width: 44%;
-    height: 100%
+    width: 37%;
+    height: 100%;
 }
 
 .footer-right {
@@ -4729,8 +4730,8 @@ section#l-instructor.l-instructor-style1 {
 
 #mt_footer .mt_contact_ftr li {
     padding-left: 0;
-    width: 100%;
-    float: left
+    width: 50%;
+    float: left;
 }
 
 #mt_footer .mt_contact_ftr li span {
@@ -5036,7 +5037,7 @@ section#l-instructor.l-instructor-style1 {
 
 #home-banner {
     overflow: hidden;
-    height: 715px;
+    height: 450px;
     position: relative;
     background: linear-gradient(-29deg, #000000 0, #000000 100%)
 }
@@ -5048,9 +5049,9 @@ section#l-instructor.l-instructor-style1 {
 
 #home-banner>.carousel-inner>.item>img,
 #home-banner>.carousel-inner>.item>a>img {
-    opacity: .4;
+    opacity: 0.8;
     margin: auto;
-    max-width: inherit
+    max-width: inherit;
 }
 
 #home-banner .caption_slide1 .mt_btn_white-bor {
@@ -5181,7 +5182,7 @@ section#l-instructor.l-instructor-style1 {
 
 @media only screen and (max-width:767px) {
     #home-banner {
-        height: 630px
+        height: 350px;
     }
     div#home-banner:before {
         border-radius: 40px 40px 0 0
@@ -5737,7 +5738,7 @@ section#l-instructor.l-instructor-style1 {
 
 @media(max-width:991px) {
     #inner-navigation .navbar.navbar-default {
-        padding-bottom: 12px
+        padding-bottom: 5px;
     }
     #inner-navigation .navbar.navbar-default.navbar-sticky-in .slicknav_btn.slicknav_open:before,
     #inner-navigation .navbar.navbar-default.navbar-sticky-in .slicknav_btn.slicknav_collapsed:before {

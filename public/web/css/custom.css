@@ -15,3 +15,67 @@
     padding-bottom: 130px;
     padding-top: 0;
 }
+.top-bar-right ul li a.btn {
+    color: #ffffff;
+}
+.topbar-inner .top-bar-left ul li i {
+    color: #ffac00;
+    border: 1px solid #ffac00;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+#home-banner .carousel-inner .item.active {
+    height: 450px;
+}
+#inner-navigation .navbar-fixed-top.navbar-sticky-in .logo {
+    width: 6%;
+    margin-top: -20px;
+    margin-bottom: -8px;
+}
+#const-testi .slick-slider {
+    margin: 0;
+    padding-top: 20px;
+}
+.noticeboard {
+    background: #eee;
+}
+.noticeboard .notice-head {
+    padding: 5px;
+    background: #2a2f52;
+    color: #fff;
+}
+.about_services i {
+    font-size: 15px;
+}
+.notice-foot {
+    padding: 5px;
+}
+.noticeboard .clender {
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+.noticeboard span.clender i {
+    margin-bottom: 5px;
+    color: #333;
+}
+@media (min-width:991px) {
+    .logo {
+        width: 12%;
+        margin-top: -51px;
+    }
+    #home-banner>.carousel-inner>.item>img,
+    #home-banner>.carousel-inner>.item>a>img {
+        height: auto;
+    }
+}
+@media (max-width:767px) {
+    .logo {
+        width: 23%;
+    }
+    #home-banner>.carousel-inner>.item>img,
+    #home-banner>.carousel-inner>.item>a>img {
+        height: 350px;
+    }
+}

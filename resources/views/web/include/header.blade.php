@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jigyas is a creative education html template">
-    <title>Jigyas</title>
+    <title>Jigyas - Education HTML Template</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- CSS -->
     <link href="{{asset('web/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -45,12 +45,12 @@
         <nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function navbar-arrow">
             <div class="container">
                 <div class="logo pull-left">
-                    <h2><a href="index.php">Jigyas</a></h2>
+                <h2><a href="{{route('web.index')}}"><img src="{{asset('web/images/logo.png')}}" alt=""></a></h2>
                 </div>
                 <div id="navbar" class="navbar-nav-wrapper pull-right">
                     <ul class="nav navbar-nav navbar-right" id="responsive-menu">
                         <li class="active">
-                            <a href="#">Home</a>
+                            <a href="{{route('web.index')}}">Home</a>
                         </li>
                         <li>
                             <a href="#">About</a>
@@ -80,7 +80,7 @@
                             <a href="#">Gallery</a>
                         </li>
                         <li>
-                            <a href="contact.php">Contact</a></ul>
+                            <a href="{{route('web.contact.contact')}}">Contact</a></ul>
                         </li>
                     </ul>
                 </div>
